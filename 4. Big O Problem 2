@@ -1,0 +1,38 @@
+/*Javascript*/
+function anotherFunChallenge(input) {
+  let a = 5; //O(1)
+  let b = 10; //O(1)
+  let c = 50; //O(1)
+  for(let i = 0; i < input; i++) { //O(n)
+    let x = i + 1; //O(n)
+    let y = i + 2; //O(n)
+    let z = i + 3; //O(n)
+  }
+  
+  for(let j = 0; j < input; j++) { //O(n)
+    let p = j*2; //O(n)
+    let q = j*2; //O(n)
+  }
+  let whoAmI = "I don't Know"; //O(1)
+}
+
+BIG O(4 + 7n)
+
+/*Java*/
+public void anotherFunChallenge(int input){
+  int a = 5;
+  int b = 10;
+  int c = 50;
+  
+  for(int i = 0; i < input; i++) {
+    int x = i + 1;
+    int y = i + 2;
+    int z = i + 3;
+  }
+  
+  for(int j = 0; j < input; j++) {
+    int p = j*2;
+    int q = j*2;
+  }
+  int whoAmI = "I don't Know";
+}
