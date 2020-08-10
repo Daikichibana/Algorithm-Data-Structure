@@ -1,0 +1,23 @@
+   function booo(n) {
+    for (let i = 0; i < n.length; i++) {
+      console.log('boooo!');
+    }
+   }
+   
+   booo([1,2,3,4,5])
+   
+   Time Complexity: O(n)
+   Space Complexity: O(1)
+   
+   function arrayOfHiNTimes(n) {
+    let hiArray = [];
+    for (let i = 0; i < n; i++) {
+      hiArray = 'hi';
+    }
+    return hiArray;
+   }
+   
+   arrayOfHiNTimes(6)
+   
+   Time Complexity: O(n)
+   Space COmplexity: O(n)
