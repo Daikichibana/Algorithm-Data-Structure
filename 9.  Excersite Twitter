@@ -1,0 +1,22 @@
+
+//Find 1st, Find Nth...
+const array = ['hi', 'my', 'teddy'];
+array[0];
+array[array.length-1];
+//O(1)
+
+//Compare de data between the tweets
+const array =[{
+    tweet: 'hi',
+    date: 2012
+    }, {
+     tweet: 'my',
+     date: 2014
+    }, {
+     tweet: 'teddy',
+     date: 2018
+    }];
+//O(n)
+
+'sdasdadawqcsa'.length //O(1)
+//nota: El coste de la funcion length depende del lenguajed en el que se este programando. 
