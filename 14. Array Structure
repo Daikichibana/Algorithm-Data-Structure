@@ -1,0 +1,38 @@
+class Array {
+  constructor() {
+    this.length = 0;
+    this.value = {};
+  }
+  
+  get(index){
+    return this.value[index];
+  }
+  
+  push(item) {
+    this.value[length] = item;
+    this.length++;
+    return this.length;
+  }
+  
+  pop(){
+    const lastItem = this.value[this.length-1];
+    delete this.value[this.length-1];
+    length--;
+    return lastItem;
+  }
+  
+  delete(index){
+    const item = this.value[index];
+    this.shiftItem(index);
+    return item;
+  }
+  
+  shiftItem(index) {
+    for(let i=index; i< length; i++) {
+      this.value[i] = this.value[i+1];
+    }
+    delete this.value[this.length-1];
+    this.length--;
+  }
+  
+}
