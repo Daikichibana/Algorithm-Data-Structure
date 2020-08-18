@@ -15,10 +15,12 @@ class Array {
   }
   
   pop(){
-    const lastItem = this.value[this.length-1];
-    delete this.value[this.length-1];
-    this.length--;
-    return lastItem;
+    if(this.length > 0){
+      const lastItem = this.value[this.length-1];
+      delete this.value[this.length-1];
+      this.length--;
+      return lastItem;
+    }
   }
   
   delete(index){
