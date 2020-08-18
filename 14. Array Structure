@@ -9,7 +9,7 @@ class Array {
   }
   
   push(item) {
-    this.value[length] = item;
+    this.value[this.length] = item;
     this.length++;
     return this.length;
   }
