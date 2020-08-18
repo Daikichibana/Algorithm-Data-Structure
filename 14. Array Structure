@@ -17,7 +17,7 @@ class Array {
   pop(){
     const lastItem = this.value[this.length-1];
     delete this.value[this.length-1];
-    length--;
+    this.length--;
     return lastItem;
   }
   
