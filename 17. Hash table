@@ -3,15 +3,46 @@ class HashTable {
     this.data = new Array(size);
   }
   
-  _hash(key) {
+  //Funcion Hash
+  _hash(key) { //Cuando se pone " _ " al comienzo del nombre de la funcion entonces esta funcion es interpretada como que deberia ser privada. (ES6)
     let hash = 0;
     for (let i=0; i < key.length; i++) {
       hash = (hash + key.charCodeAt(i) * i) % this.data.length
     }
     return hash;
   }
+  
+  set(key,value) {
+    let address = this._hash(key);
+    if(!this.data[address]) {
+      this.data[address] = [];
+    }
+    this.data[address].push([key, value ]);
+  }
+  
+  get(key) {
+     let address = this._hash(key);
+     const currentBucket = this.data[address];
+     if(currentBucket){
+      for(let i=0; i < currentBucket.length; i++)
+        if(this.currentBucket[i][0] === key)
+          return currentBucket[i][1];
+     } //O(1)
+     return undefined;
+  }
+  
+  keys(){
+    const keysArray = [];
+    for (let i=0; i < this.length; i++) {
+      if(this.data[i]) {
+        keysArray.push(this.data[i][0][0]);
+      }
+    }
+    return keysArray; 
+  }
 }
 
 const myHashTable = new HashTable(50);
 myHashTable.set('grapes', 10000);
-myHashTable.get('grapes')
+myHashTable.set('apples', 54);
+myHashTable.get('grapes');
